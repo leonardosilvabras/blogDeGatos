@@ -1,0 +1,21 @@
+* {
+    /*reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*variaveis*/
+    --primaryColor: hsl(196, 100%, 98%);
+    --secundaryColor: hsl(195, 91%, 25%);
+    --textColorDefault: hsl(240, 5%, 7%);
+    --textColorSecundary: hsl(0, 0%, 100%);
+
+    /*rem > px*/
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
