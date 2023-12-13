@@ -1,43 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
 
 * {
-    /*reset and presets*/
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Mulish', sans-serif;
+  /*reset and presets*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
 }
 
 :root {
-    /*variaveis*/
-    --primaryColor: hsl(196, 100%, 98%);
-    --secundaryColor: hsl(195, 91%, 25%);
-    --terciaryColor: hsla(0, 0%, 100%, 0.2);
-    --textColorDefault: hsl(240, 5%, 7%);
-    --textColorSecundary: hsl(0, 0%, 100%);
+  /*variaveis*/
+  --primaryColor: hsl(196, 100%, 98%);
+  --secundaryColor: hsl(195, 91%, 25%);
+  --terciaryColor: hsla(0, 0%, 100%, 0.2);
+  --footerColor: hsl(195, 46%, 40%);
+  --textColorDefault: hsl(240, 5%, 7%);
+  --textColorSecundary: hsl(0, 0%, 100%);
 
-    /*rem > px*/
-    font-size: 62.5%;
+  /*rem > px*/
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
-    min-width: 100vw;
-    min-height: 100vh;
+  font-size: 1.6rem;
 }
 
 header {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 4rem 1fr 4rem;
-    background-color: var(--secundaryColor);
-    padding: 1.2rem 2.8rem;
-    gap: 2.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem;
+  background-color: var(--secundaryColor);
+  padding: 1.2rem 2.8rem;
+  gap: 2.5rem;
 }
 
 .input-wrapper input {
-    width: 100%;
-    border-radius: .5rem;
-    background-color: var(--terciaryColor);
-    padding: 1.2rem 1.4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--terciaryColor);
+  color: var(--textColorSecundary);
+  padding: 1.2rem 1.4rem;
+  outline: 0;
+  border: none;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--textColorSecundary);
+  opacity: 70%;
+}
+
+main {
+  margin-top: 6.6rem;
+  max-width: 100vw;
+}
+
+main img {
+  width: 100%;
+  object-fit: cover;
+}
+
+main .title,
+p {
+  padding: 0 2.6rem 0 2.2rem;
+}
+
+main p {
+  margin-top: 3rem;
+}
+
+main .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+main button {
+  background-color: var(--secundaryColor);
+  padding: 1.2rem;
+  border-radius: 50%;
+  border: none;
+}
+
+main button img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.content .title h2 {
+  margin: 3rem 0 0.8rem 0;
+}
+
+.article {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0 2.2rem 0 2.6rem;
+  gap: 3.2rem;
+}
+
+.article h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+  margin-top: 3.2rem;
+}
+
+.article-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-items img {
+  width: 15rem;
+  aspect-ratio: 16/9;
+}
+
+.items-desc {
+  margin-left: 1.6rem;
+  width: 100%;
+}
+
+.items-desc h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+.items-desc {
+  font-size: 1.4rem;
+  line-height: 160%;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--footerColor);
+  color: var(--textColorSecundary);
+  padding: 1.6rem;
+  margin-top: 4rem;
+}
+
+@media (min-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4.5rem 11rem 0 11rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    grid-template-columns: 1fr 38rem;
+  }
+
+  .content .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
